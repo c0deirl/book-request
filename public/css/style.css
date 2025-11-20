@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #282c34; /* Dark background */
+  color: #abb2bf; /* Light gray text */
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1, h2 {
+  margin-bottom: 1rem;
+  color: #61afef; /* A softer blue for headings */
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px; /* Adjust size as needed */
+  margin-right: 15px;
+}
+
+.request-form-container {
+  margin-bottom: 2rem;
+  padding: 20px;
+  background: #323842; /* Darker background for form */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Darker shadow */
+}
+
+.requests-list-container {
+  margin-top: 2rem;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #444; /* Darker border */
+}
+
+.request-content {
+  flex: 1;
+}
+
+.request-item.available {
+  opacity: 0.7; /* Slightly dim available items if desired */
+}
+
+.available-tag {
+  font-size: 1.2em; /* Make text larger */
+  color: #006400; /* Dark green color */
+  margin-left: 20px; /* Push text to the right */
+  font-weight: bold;
+}
+
+/* General button style */
+button {
+  background-color: #56b6c2; /* A teal-like color for buttons */
+  color: #282c34; /* Dark text for light buttons */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #61afef; /* Lighter blue on hover */
+}
+
+/* Form elements */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #555; /* Darker border for inputs */
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #3e4451; /* Darker input background */
+  color: #abb2bf; /* Light text for inputs */
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Search form on index.ejs */
+.search-books-form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  flex-grow: 1;
+  margin-right: 10px;
+  margin-bottom: 0; /* Override default input margin */
+}
+
+.search-button {
+  margin-top: 0; /* Override default button margin */
+  padding: 8px 15px;
+}
+
+/* Search page specific styles */
+.search-form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.search-form input[type="text"] {
+  flex-grow: 1;
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+
+.search-form button {
+  margin-top: 0;
+}
+
+.back-button {
+  display: inline-block;
+  background-color: #56b6c2; /* Consistent button style */
+  color: #282c34;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  background-color: #61afef;
+}
+
+.book-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.book-card {
+  background: #323842; /* Darker background */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.book-thumbnail {
+  width: 128px;
+  height: 190px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border: 1px solid #444;
+  border-radius: 5px;
+}
+
+.book-details h3 {
+  margin-top: 0;
+  color: #c678dd; /* A distinct color for book titles */
+}
+
+.book-details p {
+  font-size: 0.9em;
+  color: #abb2bf;
+}
+
+.request-book-button {
+  margin-top: 15px;
+  background-color: #98c379; /* A green color for request button */
+  color: #282c34;
+}
+
+.request-book-button:hover {
+  background-color: #b0d49f;
+}
+
+.error-message {
+  color: #e06c75; /* Red color for error messages */
+  background-color: #3e4451;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.mark-available-button, .delete-button {
+  margin-left: 10px;
+}

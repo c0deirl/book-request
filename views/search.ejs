@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Books - Book Request System</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="dark-mode">
+    <div class="container">
+        <h1 class="page-title"><img src="/images/logo.png" alt="Book Request Logo" class="logo"> Search Books</h1>
+
+        <a href="/" class="back-button">Back to Home</a>
+
+        <form action="/search-books" method="GET" class="search-form">
+            <input type="text" name="q" placeholder="Search for books..." value="<%= typeof query !== 'undefined' ? query : '' %>">
+            <button type="submit">Search</button>
+        </form>
+
+        <% if (typeof error !== 'undefined' && error) { %>
+            <p class="error-message"><%= error %></p>
+        <% } else if (books.length > 0) { %>
+            <div class="book-results">
+                <% books.forEach(book => { %>
+                    <div class="book-card">
+                        <img src="<%= book.thumbnail %>" alt="<%= book.title %> Thumbnail" class="book-thumbnail">
+                        <div class="book-details">
+                            <h3><%= book.title %></h3>
+                            <p><strong>Author(s):</strong> <%= book.authors %></p>
+                            <p><%= book.description %></p>
+                            <button class="request-book-button"
+                                    data-title="<%= book.title %>"
+                                    data-author="<%= book.authors %>"
+                                    data-description="<%= book.description %>">
+                                Request this Book
+                            </button>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        <% } else { %>
+            <p>No books found. Try a different search term.</p>
+        <% } %>
+    </div>
+
+    <script>
+        document.querySelectorAll('.request-book-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const title = this.dataset.title;
+                const author = this.dataset.author;
+                const description = this.dataset.description;
+
+                // Store in local storage to pass to the main page
+                localStorage.setItem('requestedBook', JSON.stringify({ title, author, description }));
+                window.location.href = '/'; // Redirect to the main page
+            });
+        });
+    </script>
+</body>
+</html>

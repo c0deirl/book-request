@@ -96,9 +96,9 @@ The application will then start and be available at `http://ip:3000`.
 
 ---
 ## Screenshots
-<img width="1196" height="833" alt="request1" src="https://github.com/user-attachments/assets/96bd7965-a416-452b-9eb3-c7fbb5f4721a" />
-<img width="1071" height="818" alt="request2" src="https://github.com/user-attachments/assets/51862e70-e1e0-4ce5-a9be-0da20711bcb0" />
-<img width="1133" height="874" alt="request3" src="https://github.com/user-attachments/assets/5ee3946e-38c7-4862-8f4d-6721debca7a2" />
+<img width="1196" height="833" alt="request1" src="https://github.com/user-attachments/assets/edfa46d1-c9d0-4681-9d0c-8ca54b38c614" />
+<img width="1071" height="818" alt="request2" src="https://github.com/user-attachments/assets/7c128a8c-a3cc-4ecf-8736-f822e5bfd62e" />
+<img width="1133" height="874" alt="request3" src="https://github.com/user-attachments/assets/d6a0adcf-0231-476b-beaf-043ab80f40a5" />
 
 ---
 
